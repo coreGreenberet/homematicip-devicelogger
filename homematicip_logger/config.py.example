@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+
+ACCESS_POINT = '<INSERT ACCESSPOINT ID>'
+AUTH_TOKEN = '<INSERT AUTH TOKEN>'
+
+DBTYPE = 'sqlite'
+SQLITE_DBNAME = 'database.db'
+
+#DBTYPE='postgresql'
+PSQL_DBNAME = 'DATABASE'
+PSQL_USERNAME = 'USERNAME'
+PSQL_PASSWORD = 'PASSWORD'
+PSQL_HOST = 'HOST'
+
+#Level			Numeric value
+#CRITICAL 		50
+#ERROR 			40
+#WARNING 		30
+#INFO 			20
+#DEBUG 			10
+#NOTSET 		0
+LOGGING_LEVEL = 40
+
+LOGGING_FILENAME = None

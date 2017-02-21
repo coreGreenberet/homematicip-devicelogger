@@ -1,0 +1,2 @@
+homematicip>=0.2
+peewee
