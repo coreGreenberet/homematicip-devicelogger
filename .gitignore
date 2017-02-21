@@ -88,3 +88,5 @@ ENV/
 # Rope project settings
 .ropeproject
 /homematicip_logger/config.py
+/.vs
+/config.py
