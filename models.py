@@ -30,6 +30,7 @@ class HeatingThermostat(BaseStatisticalObject):
 class PlugableSwitchingMeasuring(BaseStatisticalObject):
     currentPowerConsumption = peewee.FloatField()
     energyCounter = peewee.FloatField()
+    on = peewee.BooleanField()
 
 class WallmountedThermostatPro(BaseStatisticalObject):
     humidity = peewee.IntegerField()

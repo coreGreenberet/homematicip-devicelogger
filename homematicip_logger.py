@@ -25,7 +25,7 @@ def write_heatingthermostat(room,device):
 def write_plugableswitchmeasuring(room,device):
     result = models.PlugableSwitchingMeasuring.select().where((models.PlugableSwitchingMeasuring.hmip_id==device.id) & (models.PlugableSwitchingMeasuring.lastStatusUpdate==device.lastStatusUpdate)).execute()
     if len(result)==0:
-        models.PlugableSwitchingMeasuring.create(roomname=room, hmip_id=device.id, label=device.label, lastStatusUpdate=device.lastStatusUpdate, currentPowerConsumption=device.currentPowerConsumption, energyCounter=device.energyCounter)
+        models.PlugableSwitchingMeasuring.create(roomname=room, hmip_id=device.id, label=device.label, lastStatusUpdate=device.lastStatusUpdate, currentPowerConsumption=device.currentPowerConsumption, energyCounter=device.energyCounter, on=device.on)
 
 def write_wallmountedthermostatpro(room,device):
     result = models.WallmountedThermostatPro.select().where((models.WallmountedThermostatPro.hmip_id==device.id) & (models.WallmountedThermostatPro.lastStatusUpdate==device.lastStatusUpdate)).execute()
