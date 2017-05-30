@@ -15,7 +15,7 @@ home.get_current_state()
 def write_shutter(room,device):
     result = models.ShutterContact.select().where((models.ShutterContact.hmip_id==device.id) & (models.ShutterContact.lastStatusUpdate==device.lastStatusUpdate)).execute()
     if len(result)==0:
-        models.ShutterContact.create(roomname=room, hmip_id=device.id, label=device.label, lastStatusUpdate=device.lastStatusUpdate, open=device.open)
+        models.ShutterContact.create(roomname=room, hmip_id=device.id, label=device.label, lastStatusUpdate=device.lastStatusUpdate, open=device.windowState=='OPEN')
 
 def write_heatingthermostat(room,device):
     result = models.HeatingThermostat.select().where((models.HeatingThermostat.hmip_id==device.id) & (models.HeatingThermostat.lastStatusUpdate==device.lastStatusUpdate)).execute()
