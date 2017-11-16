@@ -1,2 +1,2 @@
-homematicip>=0.2
+homematicip>=0.8
 peewee

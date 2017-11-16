@@ -20,6 +20,8 @@ class BaseStatisticalObject(BaseModel):
     label = peewee.CharField()
     lastStatusUpdate = peewee.DateTimeField(null=True)
     roomname = peewee.CharField()
+    rssiDeviceValue = peewee.IntegerField ()
+    rssiPeerValue = peewee.IntegerField()
 
 class ShutterContact(BaseStatisticalObject):
     open = peewee.BooleanField()
